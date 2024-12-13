@@ -3,6 +3,7 @@ import { Card,CardContent,CardDescription, CardHeader,CardTitle } from "@/compon
 import { Input } from "@/components/ui/input";
 import { Label } from "@radix-ui/react-label";
 import { signIn } from "../utils/auth";
+import { SubmitButton } from "../components/SubmitButtons";
 
 export default function Login(){
     return (
@@ -23,7 +24,7 @@ className="flex flex-col gap-y-4">
                         <Label>Email</Label>
                         <Input name ="email" type="email" required placeholder="hello@example.com" />
                     </div>
-                    <Button>Submit</Button>
+                    <SubmitButton/>
                 </form>
             </CardContent>
         </Card>
