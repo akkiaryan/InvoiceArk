@@ -14,14 +14,14 @@ export default function Login(){
                 <CardDescription>Enter your email below to Login</CardDescription>
             </CardHeader>
             <CardContent>
-                <form action={async () => {
+                <form action={async (formData) => {
         "use server";
-        await signIn();
+        await signIn("nodemailer", formData);
       }}
 className="flex flex-col gap-y-4">
                     <div className="flex flex-col gap-y-2">
                         <Label>Email</Label>
-                        <Input placeholder="hello@example.com" />
+                        <Input name ="email" type="email" required placeholder="hello@example.com" />
                     </div>
                     <Button>Submit</Button>
                 </form>
