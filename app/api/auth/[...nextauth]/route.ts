@@ -1,2 +1,2 @@
-import * as authHandlers from "@/app/util/auth";
-export const { GET, POST } = authHandlers.handlers;
+import  { handlers } from "@/app/utils/auth";
+export const { GET, POST } = handlers;
