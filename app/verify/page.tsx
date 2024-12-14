@@ -1,6 +1,7 @@
 import { buttonVariants } from "@/components/ui/button";
 import { Card,CardContent,CardDescription,CardFooter,CardHeader, CardTitle } from "@/components/ui/card";
-import { AlertCircle, ArrowLeft, Link, Mail } from 'lucide-react';
+import { AlertCircle, ArrowLeft, Link, Link2, Mail } from 'lucide-react';
+
 
 export default function Verify(){
     return (
@@ -23,13 +24,15 @@ export default function Verify(){
                     </div>
                 </CardContent>
                 <CardFooter>
-                    <Link 
-                    href="/" className={buttonVariants({
-                     className: "w-full",
-                        variant: "outline", 
-                    })}>
-                    <ArrowLeft className="size-4 mr-2" /> Back to Homepage
-                    </Link>
+                <a
+      href="/"
+      className={buttonVariants({
+        className: "w-full",
+        variant: "outline",
+      })}
+    >
+      <ArrowLeft className="size-4 mr-2" /> Back to Homepage
+    </a>
                 </CardFooter>
             </Card>
         </div>
