@@ -8,6 +8,7 @@ import { Menu, User2 } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger, } from "@/components/ui/dropdown-menu";
+import { signOut } from "../utils/auth";
 
 export default async function DashboardLayout({ children }: { children: ReactNode }) {
   const session = await requireUser();
@@ -68,10 +69,20 @@ export default async function DashboardLayout({ children }: { children: ReactNod
                 <DropdownMenuItem asChild>
                     <Link href="/dashboard/invoices">Invoices</Link>
                 </DropdownMenuItem>
+                <DropdownMenuSeparator/>
+                <DropdownMenuItem asChild>
+                    <form className="w-full" action={async () => {
+                        "use server";
+                        await signOut();
+                    }}>
+                        <button className="w-full text-left">Log out</button>
+                    </form>
+                    </DropdownMenuItem> 
                 </DropdownMenuContent>
             </DropdownMenu>
         </div>
         </header>
+        <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">{children}</main>
       </div>
     </div>
   </>
