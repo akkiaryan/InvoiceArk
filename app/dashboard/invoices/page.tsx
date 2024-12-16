@@ -13,7 +13,7 @@ export default function InvoicesRout(){
                         <CardTitle className="text-2xl font-bold" >Invoices</CardTitle>
                         <CardDescription>Manage you invoices right here</CardDescription>
                     </div>
-                    <Link href="" 
+                    <Link href="/dashboard/invoices/create" 
                     className={buttonVariants()}>
                     <PlusIcon /> Create Invoice
                     </Link>
