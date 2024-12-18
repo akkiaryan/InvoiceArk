@@ -6,6 +6,7 @@ import {Loader2}  from 'lucide-react';
 
 interface iAppProps{
     text: string;
+    className?: string;
 }
 export function SubmitButton({text}: iAppProps){
     const {pending} = useFormStatus();
