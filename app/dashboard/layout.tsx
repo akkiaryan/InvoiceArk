@@ -11,6 +11,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import { signOut } from "../utils/auth";
 import prisma from "../utils/db";
 import { redirect } from "next/navigation";
+import { Toaster } from "@/components/ui/sonner";
 async function getUser(userId: string){
   const data = await prisma.user.findUnique({
     where:{
@@ -101,6 +102,8 @@ export default async function DashboardLayout({ children }: { children: ReactNod
         <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">{children}</main>
       </div>
     </div>
+    <Toaster richColors closeButton theme="light"  / >
   </>
+  
   );
 }

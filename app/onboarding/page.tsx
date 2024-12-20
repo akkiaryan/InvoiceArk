@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { SubmitButton } from "../components/SubmitButtons"
 import { useActionState } from "react";
-import { onboardUser } from "../verify/action";
+import { onboardUser } from "../verify/actions";
 import { useForm } from "@conform-to/react";
 import { parseWithZod } from "@conform-to/zod";
 import { onboardingSchema } from "../utils/zodSchemas";
@@ -22,6 +22,7 @@ export default function Onboarding(){
     });
     return (
         <div className="min-h-screen w-screen flex items-center justify-center">
+            <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"><div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]"></div></div>
         <Card className="max-w-sm mx-auto">
              <CardHeader>
                   <CardTitle className="text-xl">You are almost finished!</CardTitle>

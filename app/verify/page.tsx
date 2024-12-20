@@ -5,7 +5,10 @@ import { AlertCircle, ArrowLeft, Link, Link2, Mail } from 'lucide-react';
 
 export default function Verify(){
     return (
+        
         <div className="min-h-screen w-full flex items-center justify-center">
+<div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"><div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]"></div></div>
+
             <Card className="w-[380px] px-5 ">
                 <CardHeader className="text-center">
                     <div className="mb-4 mx-auto flex size-20 items-center justify-center
