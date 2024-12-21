@@ -44,14 +44,4 @@ export default function Onboarding(){
                     </div>
                      <div className="grid gap-2">
                      <Label>Adress</Label>
-                     <Input name={fields.address.name} key={fields.address.key} defaultValue={fields.address.initialValue} placeholder="1234 Main St"/>
-                     <p className="text-red-500 text-sm">{fields.address.errors}</p>
-                     </div>
-                     <SubmitButton text ="Finish Onboarding"/>
-                </form>
-                
-                </CardContent>     
-        </Card>
-        </div>
-    )
-}
+                     <Input name={fields.address.name} key={fields.address.key} defau
